@@ -1,4 +1,3 @@
-
 (function($) {
 
 	var	$window = $(window),
@@ -22,6 +21,18 @@
 			}, 100);
 		});
 
+		// Form Validation
+		$('.form').validate({
+			rules: {
+				name: 'required',
+				email: {
+					required: true,
+					email: true
+				},
+				message: 'required'
+			}
+		});
+		
 	// Header.
 		if ($banner.length > 0
 		&&	$header.hasClass('alt')) {
